@@ -33,8 +33,8 @@
                 <tr>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
-                    <td><a href="UserController?action=updateUser&userId=${user.id}">Update</a></td>
-                    <td><a href="UserController?action=deleteUser&userId=${user.id}">Delete</a></td>
+                    <td><a href="/edit/${user.id}">Edit</a></td>
+                    <td><a href="/delete/${user.id}">Delete</a></td>
                 </tr>
             </#list>
 
