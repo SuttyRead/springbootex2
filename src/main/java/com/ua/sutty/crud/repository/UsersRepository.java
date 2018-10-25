@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 18.04.2018
@@ -18,8 +19,6 @@ import java.util.List;
 @Transactional
 public interface UsersRepository extends JpaRepository<User, Long> {
     User getUserById(Long id);
-
-//    @Query("update user u set u.first_name = (:first_name), u.last_name = (:last_name) where u.id = (:userId)")
-//    void updateUser(@Param("first_name")String first_name,@Param("last_name") String last_name,@Param("userId") Long userId);
+    Optional<User> findOneByLogin(String login);
 
 }
